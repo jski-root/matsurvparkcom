@@ -1,0 +1,4 @@
+host.json
+local.settings.json
+target/
+*.class
