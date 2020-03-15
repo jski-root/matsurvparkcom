@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Matsu RV Park</title>
+
+<link rel="manifest" href="./matsu.appcache">
+
+<!-- include javascript and style sheets -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="./css/materialize.min.css"  media="screen,projection"/>
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<style>
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #eceff1 ;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+#nav-mobile a {
+color: white;
+}
+
+
+.picker__date-display { 
+background-color: green;
+ }
+
+.picker__day.picker__day--today { color: green; }
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+ background-color: green;}
+.picker__close { color: green !important;}
+.picker__today { color: green !important;}
+
+</style>
+
+</head>
+<body>
+
+<header>
+<!-- logo, navigation n such -->
+<nav class="green" role="navigation">
+     <div class="nav-wrapper container">
+     	  <a id="logo-container" href="./index.html" class="brand-logo hide-on-med-and-down">Matsu RV Park</a>
+	  <a id="logo-containe2" href="./index.html" class="brand-logo hide-on-large-only right">Matsu RV Park</a>
+     <ul class="right hide-on-med-and-down">
+     	 <li><a href="./index.html">Home</a></li>
+	 <li><a href="./images.html">Pics</a></li>
+	 <li><span style="text-decoration: line-through;">Reservation</span><!-- <a href="./reservation.html">Reservation</a> --></li>
+	 <li><a href="./location.html">Location</a></li>
+	 <li><a href="./area.html">Area Links</a><li>
+     </ul>
+
+     <ul id="nav-mobile" class="side-nav green">
+       <li><a href="./index.html">Home</a></li>
+	 <li><a href="./images.html">Pics</a></li>
+	 <li><span style="text-decoration: line-through;">Reservation</span><!-- <a href="./reservation.html">Reservation</a> --></li>
+	 <li><a href="./location.html">Location</a></li>
+	 <li><a href="./area.html">Area Links</a><li>     	 
+     </ul>
+     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+     </div>
+
+
+
+</nav>
+
+</header>
+
+<main>
+<div class="container inline-flex">
+<div class="row flex" style="padding-right: 10px; padding-left: 10px; margin: auto;">
+
+<div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/DSC01655.jpg"/></div><div class="card-content"><p><b>Busy Summer day pic
+</b></p></div><div class="card-action"><a href="./img/pics/DSC01655.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/IMG_1285.jpg"/></div><div class="card-content"><p><b>As a Mother of 3 veterans, I am a big supporter of veterans and members of the military
+</b></p></div><div class="card-action"><a href="./img/pics/IMG_1285.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/SHOWER_2_DONE.jpg"/></div><div class="card-content"><p><b>Showers located inside main store
+</b></p></div><div class="card-action"><a href="./img/pics/SHOWER_2_DONE.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/barbara_60th.jpg"/></div><div class="card-content"><p><b>Barbara's Birthday Party
+</b></p></div><div class="card-action"><a href="./img/pics/barbara_60th.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/barblegendrefish.jpg"/></div><div class="card-content"><p><b>Barbara with the biggest one of the year! 
+</b></p></div><div class="card-action"><a href="./img/pics/barblegendrefish.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/bigfish.jpg"/></div><div class="card-content"><p><b>Another big catch
+</b></p></div><div class="card-action"><a href="./img/pics/bigfish.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/chinooks08.jpg"/></div><div class="card-content"><p><b>Jim an Barbara...with the chinooks and the sockeyes
+</b></p></div><div class="card-action"><a href="./img/pics/chinooks08.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/christmas_eve_sunset_2009_001.jpg"/></div><div class="card-content"><p><b>Christmas Eve Sunset
+</b></p></div><div class="card-action"><a href="./img/pics/christmas_eve_sunset_2009_001.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/colinwithfish.jpg"/></div><div class="card-content"><p><b>Colin’s Catch
+</b></p></div><div class="card-action"><a href="./img/pics/colinwithfish.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/denise2.jpg"/></div><div class="card-content"><p><b>Store Front
+</b></p></div><div class="card-action"><a href="./img/pics/denise2.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/denise3.jpg"/></div><div class="card-content"><p><b>Some local visitors :-)
+</b></p></div><div class="card-action"><a href="./img/pics/denise3.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/end_of_summer_2010_010.jpg"/></div><div class="card-content"><p><b>End of Summer Party
+</b></p></div><div class="card-action"><a href="./img/pics/end_of_summer_2010_010.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/end_of_summer_2010_016.jpg"/></div><div class="card-content"><p><b>End of Summer Party II
+</b></p></div><div class="card-action"><a href="./img/pics/end_of_summer_2010_016.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/fall2010.jpg"/></div><div class="card-content"><p><b>Park in Autumn
+</b></p></div><div class="card-action"><a href="./img/pics/fall2010.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/fire.jpg"/></div><div class="card-content"><p><b>RV Park’s fire pit
+</b></p></div><div class="card-action"><a href="./img/pics/fire.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/fish004.jpg"/></div><div class="card-content"><p><b>Fishing Weigh In
+</b></p></div><div class="card-action"><a href="./img/pics/fish004.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/fish2011.jpg"/></div><div class="card-content"><p><b>Fishing Weigh In II
+</b></p></div><div class="card-action"><a href="./img/pics/fish2011.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/fishing.jpg"/></div><div class="card-content"><p><b>River Near By Park
+</b></p></div><div class="card-action"><a href="./img/pics/fishing.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/fishing2.jpg"/></div><div class="card-content"><p><b>We sell fishing items in store
+</b></p></div><div class="card-action"><a href="./img/pics/fishing2.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/joeylegendrefish.jpg"/></div><div class="card-content"><p><b>Fishing for all ages
+</b></p></div><div class="card-action"><a href="./img/pics/joeylegendrefish.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/kath_trip_110.jpg"/></div><div class="card-content"><p><b>Hurricane Train for the one of the engines
+</b></p></div><div class="card-action"><a href="./img/pics/kath_trip_110.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/kath_trip_112.jpg"/></div><div class="card-content"><p><b>Mount Denali
+</b></p></div><div class="card-action"><a href="./img/pics/kath_trip_112.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/kath_trip_149.jpg"/></div><div class="card-content"><p><b>Store Front pic II
+</b></p></div><div class="card-action"><a href="./img/pics/kath_trip_149.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/mckinely1.jpg"/></div><div class="card-content"><p><b>Mount Denali
+</b></p></div><div class="card-action"><a href="./img/pics/mckinely1.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/mexican_dinner_party.jpg"/></div><div class="card-content"><p><b>Store Dinner Table is available to all guests
+</b></p></div><div class="card-action"><a href="./img/pics/mexican_dinner_party.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/middlerow2010.jpg"/></div><div class="card-content"><p><b>Middle row for easily pulling your RV through
+</b></p></div><div class="card-action"><a href="./img/pics/middlerow2010.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/moose.jpg"/></div><div class="card-content"><p><b>Neightbor
+</b></p></div><div class="card-action"><a href="./img/pics/moose.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/morevalley.jpg"/></div><div class="card-content"><p><b>Hurricane train trestle
+</b></p></div><div class="card-action"><a href="./img/pics/morevalley.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/mountain.jpg"/></div><div class="card-content"><p><b>More Pics from near by
+</b></p></div><div class="card-action"><a href="./img/pics/mountain.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/newshower.jpg"/></div><div class="card-content"><p><b>We have showers available in Store
+</b></p></div><div class="card-action"><a href="./img/pics/newshower.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/park0003.jpg"/></div><div class="card-content"><p><b>Another Picture of Park Area
+</b></p></div><div class="card-action"><a href="./img/pics/park0003.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/parkingarea.jpg"/></div><div class="card-content"><p><b>Total view of Park Area in Autumn
+</b></p></div><div class="card-action"><a href="./img/pics/parkingarea.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/pavillion.jpg"/></div><div class="card-content"><p><b>Pavillion located on site
+</b></p></div><div class="card-action"><a href="./img/pics/pavillion.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/picnic.jpg"/></div><div class="card-content"><p><b>Park’s Picknic Tables
+</b></p></div><div class="card-action"><a href="./img/pics/picnic.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/pinks08.jpg"/></div><div class="card-content"><p><b>Jimmy the Butcher  
+</b></p></div><div class="card-action"><a href="./img/pics/pinks08.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/river.jpg"/></div><div class="card-content"><p><b>Quiet Day on the river
+</b></p></div><div class="card-action"><a href="./img/pics/river.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/rockyriver.jpg"/></div><div class="card-content"><p><b>Stream Near by
+</b></p></div><div class="card-action"><a href="./img/pics/rockyriver.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/sink.jpg"/></div><div class="card-content"><p><b>We provide a Clean facility for you and family
+</b></p></div><div class="card-action"><a href="./img/pics/sink.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/sockeye08.jpg"/></div><div class="card-content"><p><b>Sockeye Catch
+</b></p></div><div class="card-action"><a href="./img/pics/sockeye08.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/sparbyfish.jpg"/></div><div class="card-content"><p><b>nice pair for Lee
+</b></p></div><div class="card-action"><a href="./img/pics/sparbyfish.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/store.jpg"/></div><div class="card-content"><p><b>Park’s Store
+</b></p></div><div class="card-action"><a href="./img/pics/store.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/train.jpg"/></div><div class="card-content"><p><b>Train in Alaska
+</b></p></div><div class="card-action"><a href="./img/pics/train.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/tv.jpg"/></div><div class="card-content"><p><b>Inside Main Office
+</b></p></div><div class="card-action"><a href="./img/pics/tv.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/tvroomlaundry002.jpg"/></div><div class="card-content"><p><b>We have laundry located on site
+</b></p></div><div class="card-action"><a href="./img/pics/tvroomlaundry002.jpg" target="_blank">View Larger Image</a></div></div><div class="card col s12 m5 l5" style="margin: 5px;"><div class="card-image"><img src="./img/pics/valley.jpg"/></div><div class="card-content"><p><b>Picture from near by</b></p></div><div class="card-action"><a href="./img/pics/valley.jpg" target="_blank">View Larger Image</a></div></div></div>
+
+</div>
+
+
+</main>
+
+<footer class="page-footer green">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Matsu RV Park</h5>
+                <div class="grey-text text-lighten-4">
+<address>
+Willow Alaska<br/>
+Parks Hwy - Milepost 90.8<br/>
+(907) 495-6300<br/>
+</address>
+</div>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="./index.html">Main Page</a></li>
+                  <li><a class="grey-text text-lighten-3" href="./images.html">View Pictures of Area &amp; RV Park</a></li>
+                  <li><span style="text-decoration: line-through;">Make a Reservation</span><!--  <a class="grey-text text-lighten-3" href="./reservation.html">Make a Reservation</a>--></li>
+                  <li><a class="grey-text text-lighten-3" href="./location.html">Location Map</a></li>
+		  <li><a class="grey-text text-lighten-3" href="./area.html">Area Links</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            &copy; 2020 Matsu RV Park
+            
+            </div>
+          </div>
+        </footer>
+
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/materialize.min.js"></script>
+
+<script type="text/javascript">
+(function($){
+	$(function(){
+
+		$('.button-collapse').sideNav();
+		$('.parallax').parallax();
+	});
+
+
+
+})(jQuery);
+
+
+$('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: false // Close upon selecting a date,
+  });
+
+$(document).ready(function() {
+    $('select').material_select();
+  });
+        
+</script>
+
+    
+</body>
+
+</html>

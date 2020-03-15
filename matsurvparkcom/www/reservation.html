@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Matsu RV Park</title>
+
+<link rel="manifest" href="./matsu.appcache">
+
+<!-- include javascript and style sheets -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="./css/materialize.min.css"  media="screen,projection"/>
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<style>
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #eceff1 ;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+#nav-mobile a {
+color: white;
+}
+
+
+.picker__date-display { 
+background-color: green;
+ }
+
+.picker__day.picker__day--today { color: green; }
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+ background-color: green;}
+.picker__close { color: green !important;}
+.picker__today { color: green !important;}
+
+</style>
+
+</head>
+<body>
+
+<header>
+<!-- logo, navigation n such -->
+<nav class="green" role="navigation">
+     <div class="nav-wrapper container">
+     	  <a id="logo-container" href="./index.html" class="brand-logo hide-on-med-and-down">Matsu RV Park</a>
+	  <a id="logo-containe2" href="./index.html" class="brand-logo hide-on-large-only right">Matsu RV Park</a>
+     <ul class="right hide-on-med-and-down">
+     	 <li><a href="./index.html">Home</a></li>
+	 <li><a href="./images.html">Pics</a></li>
+	 <li><span style="text-decoration: line-through;">Reservation</span><!-- <a href="./reservation.html">Reservation</a> --></li>
+	 <li><a href="./location.html">Location</a></li>
+	 <li><a href="./area.html">Area Links</a><li>
+     </ul>
+
+     <ul id="nav-mobile" class="side-nav green">
+       <li><a href="./index.html">Home</a></li>
+	 <li><a href="./images.html">Pics</a></li>
+	 <li><span style="text-decoration: line-through;">Reservation</span><!-- <a href="./reservation.html">Reservation</a> --></li>
+	 <li><a href="./location.html">Location</a></li>
+	 <li><a href="./area.html">Area Links</a><li>     	 
+     </ul>
+     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+     </div>
+
+
+
+</nav>
+
+</header>
+
+<main>
+<div id="reservation_page">
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      
+<div class="parallax" style="height: 1px;">
+
+    <img src="./img/matsu_entrance.jpg" alt="Matsu RV Park Entrance Picture">
+
+</div>
+<div class="container white-text text-darken-2" style="text-shadow: 1px 1px 4px black, -1px 1px 4px black, -1px -1px 4px black, 1px -1px 4px black ">
+<br/><br/></br>        
+        
+<br/><br/><br/>
+<br/><br/><br/>
+<div class="row center">
+<h4 class="header col s12">             
+Open from May 1<sup>st</sup> to October 1<sup>st</sup>
+            <br/>
+            Reservations can be made year round
+
+
+</h4>
+</div>
+
+      </div>
+    </div>
+    
+  </div>
+
+<div class="row">
+
+<div class="col s8 offset-s2 valign card">
+
+<ul class="collection with-header">
+<li class="collection-header"><h3>Campground Rates</h3></li>
+<li class="collection-item">Full Hook-Ups $40.00 per day</li>
+<li class="collection-item">Electric &amp; Water $34.00 per day</li>
+<li class="collection-item">Electric Only $30.00 per day</li>
+<li class="collection-item">Tent Sites $17 per day</li>
+<li class="collection-item">Weekly, Monthly Rates are Available upon Request</li>
+<li class="collection-item">10% Travel Clubs Discount</li>
+<li class="collection-item">15% Active Military Discount</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+<div class="row">
+    <form id="reservation_form" class="col s10 offset-s1 card" onsubmit="return false;" >
+<h4>Reservation Form</h4>
+<div class="row">
+<div class="input-field col s5">
+     <input id="number_of_adults" type="number" class="validate" name="number_of_adults"/>
+     <label for="number_of_adults">Number of Adults</label>
+</div>
+    </div>
+
+<div class="row">
+     <div class="input-field col s5">
+     <input  id="arrival_date" type="text" class="datepicker" name="arrival_date"/>
+     <label for="arrival_date">Arrival Date</label>
+     </div>
+
+	<div class="input-field col s5">
+	<input  id="departure_date" type="text" class="datepicker" name="departure_date"/>
+	<label for="departure_date">Departure Date</label>
+	</div>
+
+
+
+</div>
+
+<div class="row">
+<div class="input-field col s6">
+    <select id="res_type" name="reservation_type">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="RV Reservation">RV Reservation</option>
+      <option value="Camping Reservation">Camping Reservation</option>
+    </select>
+    <label>RV Reservation or Camping</label>
+  </div>
+
+<div class="input-field col s5">
+<input  id="rv_length" type="number" class="validate" name="rv_length"/>
+<label for="rv_length">RV Length in Feet</label>
+</div>
+</div>
+
+<h5>Contact Information</h5>
+  
+        <div class="input-field col s6">
+          <input id="full_name" type="text" class="validate" name="full_name"/>
+          <label for="full_name">Full Name (Required)</label>
+        </div>
+
+	<div class="input-field col s8">
+<input id="email" type="email" class="validate" name="email"/>
+<label for="email">Contact Email (Required if not providing a phone number)</label>
+</div>        
+      
+      
+        <div class="input-field col s8">
+          <input  id="phone" type="tel" class="validate" name="phone"/>
+          <label for="phone">Contact Phone Number (Required if not providing an email)</label>
+        </div>
+      
+
+<div class="input-field col s8">
+     <textarea id="additional_info" class="materialize-textarea" name="additional_info"></textarea>
+     <label for="additional_info">Additional Information</label>
+</div>
+
+<div class="row">
+
+
+
+<div class="col s12">
+
+<div class="col s5">
+<p>Deposit/Cancellations Confirmed camp ground reservations must be cancelled within 24 hours.</p> 
+</div>
+
+<br/>
+
+<button class="btn green waves-effect waves-light" type="reset">clear
+    <i class="material-icons right">clear</i>
+  </button>
+<!-- Modal Trigger -->
+ <button id="res_submit" class="btn green waves-effect waves-light modal-trigger" name="action" href="#modal1">Submit
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+</div>
+    </form>
+  </div>
+
+
+
+
+</div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Reservation Submission</h4>
+<div id="waiting">
+	<div class="preloader-wrapper big active">
+    		<div class="spinner-layer spinner-blue-only">
+      		<div class="circle-clipper left">
+       		 <div class="circle"></div>
+      		</div><div class="gap-patch">
+       		 <div class="circle"></div>
+     		 </div><div class="circle-clipper right">
+        	<div class="circle"></div>
+      </div>
+
+    </div>
+  </div>
+      <p>Submitting Form, please be patient.</p>
+
+</div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">close</a>
+    </div>
+  </div>
+
+</main>
+
+
+<footer class="page-footer green">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Matsu RV Park</h5>
+                <div class="grey-text text-lighten-4">
+<address>
+Willow Alaska<br/>
+Parks Hwy - Milepost 90.8<br/>
+(907) 495-6300<br/>
+</address>
+</div>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="./index.html">Main Page</a></li>
+                  <li><a class="grey-text text-lighten-3" href="./images.html">View Pictures of Area &amp; RV Park</a></li>
+                  <li><span style="text-decoration: line-through;">Make a Reservation</span><!--  <a class="grey-text text-lighten-3" href="./reservation.html">Make a Reservation</a>--></li>
+                  <li><a class="grey-text text-lighten-3" href="./location.html">Location Map</a></li>
+		  <li><a class="grey-text text-lighten-3" href="./area.html">Area Links</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">&copy; 2020 Matsu RV Park
+            
+            </div>
+          </div>
+        </footer>
+
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/materialize.min.js"></script>
+
+<script type="text/javascript">
+
+(function($){
+	$(function(){
+
+		$('.button-collapse').sideNav();
+		$('.parallax').parallax();
+	});
+
+
+
+})(jQuery);
+
+
+$('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: false // Close upon selecting a date,
+  });
+
+$(document).ready(function() {
+    $('select').material_select();
+
+    $('.modal').modal();
+
+	document.getElementById('res_submit').addEventListener('click', () =>{
+
+		var res = '<?xml version="1.0" encoding="UTF-8"?><Reservation xmlns="https://www.matsurvpark.com/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.matsurvpark.com/schema Reservations.xsd">';
+
+	res += '<customer_name>' + $('input#full_name').val() + '</customer_name>';
+	res += '<rv_model>' + $('input#rv_length').val() + '</rv_model>';
+	res += '<number_of_persons>' + $('input#number_of_adults').val() + '</number_of_persons>';
+	res += '<arrival_date>' + $('input#arrival_date').val() + '</arrival_date>';
+		res += '<departure_date>' + $('input#departure_date').val() + '</departure_date>';
+		
+		res += '<contact_email>' + $('input#email').val() + '</contact_email>';
+		res += '<contact_phone>' + $('input#phone').val() + '</contact_phone>';
+		
+		res += '<additional_information>' + $('textArea#additional_info').val() + '</additional_information>';
+		res += '<reservation_type>' + $('select#res_type').val() + '</reservation_type>';
+
+		res += '</Reservation>'; 
+
+		var request = new XMLHttpRequest();
+
+		request.onload = () => {
+			let res_id = request.responseText;
+			console.log('req:' + res_id);
+			$('#waiting').html('<h5>Your Confirmation number is: <br/>' + res_id + ' <br/> please store for your records. Thank you for considering Matsu RV Park.</h4>');
+		};
+	
+		request.open('post', 'https://matsurvparkfunctions-1581952408905.azurewebsites.net/api/make-reservation', true);
+		request.setRequestHeader('Content-type', 'application/xml');
+		request.send(res);
+
+	});
+
+});
+        
+</script>
+
+    
+</body>
+
+</html>
