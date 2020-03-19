@@ -37,6 +37,7 @@ import org.xml.sax.SAXParseException;
  * Blueprint for adding a reservations request
  *  to Matsu RV Park's sharepoint site list.
  * 
+ *  
  * @version 1.0
  * @author jski-root
  * @since Feburary 2020
@@ -124,6 +125,7 @@ public class MatsuRvPark {
 
 				_f.additionalDataManager().put("Title", _u.get("uuid"));
 
+				//do not add null and empty values to JSON Payload.
 				if (_r.get("customerName") != null && !"".equalsIgnoreCase(_reservation.getCustomerName()))
 					_f.additionalDataManager().put("customer_name", _r.get("customerName"));
 

@@ -11,6 +11,17 @@ import com.google.gson.JsonObject;
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.http.IHttpRequest;
 
+/**
+ * Code derived from Azure sharepoint java video on youtube.
+ * 
+ * Implements the IAuthentication class, since the one provided by MS AUTH
+ * is not functional with maven.
+ * 
+ * Driver for the OAuth for sharpoint via HTTP.
+ * 
+ * @author jski
+ *
+ */
 public class Auth {
 	//Get a valid access token using the client credential flow
     private String grantType = "client_credentials";

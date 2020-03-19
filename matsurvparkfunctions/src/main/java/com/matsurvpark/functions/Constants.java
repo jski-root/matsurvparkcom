@@ -1,5 +1,11 @@
 package com.matsurvpark.functions;
 
+/**
+ * Class container for constant values that are needed to use OAuth
+ * 
+ * @author jski
+ *
+ */
 public class Constants {
 
 	public final static String clientId = System.getenv("clientId");
