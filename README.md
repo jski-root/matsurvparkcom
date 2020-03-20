@@ -12,7 +12,7 @@ Azure Functions is used to process the POST requests for the site. The main purp
 
 Information | Activity Diagram
 --|-----
-A CORS record to allow POST requests from a different url has to be created. <br/><br/> Validating with an XSD inorder to protect against XSS vulnerabilities. <br/><br/> OAuth 2.0 was used to authorized this function to insert items in a list. **NOT** using implicit flow. <br/><br/>The Code for the OAuth portion was from Microsoft Developer Caitlin Russle [github](https://www.youtube.com/redirect?q=https%3A%2F%2Fgithub.com%2Fcbales%2Fonenote-content-push-java-graph-sample&v=ZnTcmiQgS08&event=video_description&redir_token=DOXtUIvDWYStXy9uyABCmYL7KhF8MTU4NDc1MjYwMUAxNTg0NjY2MjAx). also checkout this video for more information.<br/><br/>[![Youtube Video](https://img.youtube.com/vi/ZnTcmiQgS08/0.jpg)](https://www.youtube.com/watch?v=ZnTcmiQgS08)| <img src="./media/azureFuntion.svg" alt="Activity Diagram of Reservations Function">
+A CORS record to allow POST requests from a different url has to be created. <br/><br/> Validating with an XSD inorder to protect against XSS vulnerabilities. <br/><br/> OAuth 2.0 was used to authorized this function to insert items in a list. **NOT** using implicit flow. <br/><br/>The Code for the OAuth portion was from Microsoft Developer Caitlin Bales (MSFT) [github](https://github.com/caitlinrussell/onenote-content-push-java-graph-sample). also checkout this video for more information.<br/><br/>[![Youtube Video](https://img.youtube.com/vi/ZnTcmiQgS08/0.jpg)](https://www.youtube.com/watch?v=ZnTcmiQgS08)| <img src="./media/azureFuntion.svg" alt="Activity Diagram of Reservations Function">
 
 
 
