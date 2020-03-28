@@ -15,5 +15,7 @@ Information | Activity Diagram
 A CORS record to allow POST requests from a different url has to be created. <br/><br/> Validating with an XSD inorder to protect against XSS vulnerabilities. <br/><br/> OAuth 2.0 was used to authorized this function to insert items in a list. **NOT** using implicit flow. <br/><br/>The Code for the OAuth portion was from Microsoft Developer Caitlin Bales (MSFT) [github](https://github.com/caitlinrussell/onenote-content-push-java-graph-sample). also checkout this video for more information.<br/><br/>[![Youtube Video](https://img.youtube.com/vi/ZnTcmiQgS08/0.jpg)](https://www.youtube.com/watch?v=ZnTcmiQgS08)| <img src="./media/azureFuntion.svg" alt="Activity Diagram of Reservations Function">
 
 
+<img src="./media/matsurvpark_reservations_sequence_diagram.svg" alt="Sequence Diagram of Reservations Function">
+
 
 
