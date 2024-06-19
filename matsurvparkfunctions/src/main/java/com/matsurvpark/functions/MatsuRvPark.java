@@ -29,6 +29,10 @@ import com.microsoft.graph.models.extensions.IGraphServiceClient;
 import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.requests.extensions.GraphServiceClient;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
@@ -43,6 +47,38 @@ import org.xml.sax.SAXParseException;
  * @since Feburary 2020
  */
 public class MatsuRvPark {
+
+	/**
+	 * parse HTML table into a CSV Flat File.
+	 * 
+	 * @param request
+	 * @param context
+	 * @return
+	 */
+	@FunctionName("parse-email")
+	public HttpResponseMessage parse(@HttpTrigger(name = "req", methods = {
+		HttpMethod.POST }, authLevel = AuthorizationLevel.ANONYMOUS) HttpRequestMessage<Optional<String>> request,
+		final ExecutionContext context){
+			if(request.getBody() != null){
+
+				Document doc = Jsoup.parse(request.getBody().get());
+
+				Elements rows = doc.select("tr");
+
+				StringBuilder csv = new StringBuilder();
+
+				for(Element row : rows){
+					Elements cols = row.select("td");
+					for(Element col : cols)
+						csv.append("|").append(col.text());
+				}
+
+				csv.replace(0, 1, "");
+
+				return request.createResponseBuilder(HttpStatus.OK).body(csv.toString()).build();
+			} else
+				return request.createResponseBuilder(HttpStatus.PRECONDITION_FAILED).body("no request sent").build();
+		}
 
 	@FunctionName("make-reservation")
 	public HttpResponseMessage run(@HttpTrigger(name = "req", methods = {
