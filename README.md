@@ -1,5 +1,5 @@
 # Matsu RV Park Assets
-This code is for the Matsu RV Park's reservation form input. located at [reservation site](https://www.matsurvpark.com/reservations.html).
+This code is for the Matsu RV Park's reservation form input. located at [reservation site](https://matsurvpark.com/reservation/).
 
 ![image of reservations web page](./media/matsurvrparkReservations.png "Matsu RV Park Reservations Web Page Layout")
 
